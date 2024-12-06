@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
-    return view('welcome', ['title' => 'TESTTT']);
+    return view ('kerangka/dashboard');
 });
 
-Route::get('home', function () {
-    return view ('kerangka/dashboard');
+Route::get('/form', function () {
+    return view ('kerangka/form');
 });
