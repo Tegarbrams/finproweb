@@ -13,7 +13,7 @@
                     <a href="/form">Tambah Pasien</a>
                 </li>
                 <li>
-                    <a href="#">Daftar Pasien</a>
+                    <a href="/daftarPasien">Daftar Pasien</a>
                 </li>
             </ul>
         </li>
