@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>@yield('title', 'form pasien')</title>
+    <title>@yield('title', 'Form')</title>
 
    @include('include.style')
 
@@ -20,7 +19,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
 </head>
 
 <body>
@@ -153,12 +152,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Forms
+                            Tambah Pasien
                         </h1>
                         <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
                             <li class="active">
                                 <i class="fa fa-edit"></i> Forms
                             </li>
@@ -168,14 +164,56 @@
                 <!-- /.row -->
 
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
                         <form role="form">
 
-                            <div class="form-group">
-                                <label>Text Input</label>
+                            <div class="form-group col-lg-6">
+                                <label>Nama Pasien</label>
                                 <input class="form-control">
-                                <p class="help-block">Example block-level help text here.</p>
+                            </div>
+
+                            <div class="form-group col-lg-6 pt-4 text-white">
+                                <label class="">a</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group  col-lg-12">
+                                <label>No. KTP</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group col-lg-12">
+                                <label>Jenis Kelamin</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Laki - Laki
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Perempuan
+                                    </label>
+                                </div>
+
+                            <div class="form-group">
+                                <label>Kartu Asuransi</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Kondisi</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nama Penyakit</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>ID Pasien</label>
+                                <input class="form-control">
                             </div>
 
                             <div class="form-group">
