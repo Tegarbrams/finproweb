@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('/form', function () {
     return view ('kerangka/form');
 });
+
+Route::get('/daftarPasien', function () {
+    return view ('kerangka/tabel');
+});
