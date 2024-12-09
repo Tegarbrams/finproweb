@@ -39,106 +39,7 @@
                 <a class="navbar-brand" href="index.html">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-footer">
-                            <a href="#">Read All New Messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+           @include('include.navbar')
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             @include('include.sidebar')
             <!-- /.navbar-collapse -->
@@ -168,42 +69,57 @@
 
                         <form role="form">
 
-                            <div class="form-group col-lg-6">
+                            <div class="form-group col-lg-12">
                                 <label>Nama Pasien</label>
-                                <input class="form-control">
+                                <input class="form-control" placeholder="Masukkan nama lengkap">
                             </div>
 
-                            <div class="form-group col-lg-6 pt-4 text-white">
+                            {{-- <div class="form-group col-lg-6 pt-4 text-white">
                                 <label class="">a</label>
                                 <input class="form-control">
-                            </div>
+                            </div> --}}
 
                             <div class="form-group  col-lg-12">
                                 <label>No. KTP</label>
-                                <input class="form-control">
+                                <input class="form-control" placeholder="Masukkan NIK">
                             </div>
 
                             <div class="form-group col-lg-12">
                                 <label>Jenis Kelamin</label>
-                                <div class="checkbox">
+                                <div class="radio">
                                     <label>
-                                        <input type="checkbox" value="">Laki - Laki
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Laki-laki
                                     </label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="radio">
                                     <label>
-                                        <input type="checkbox" value="">Perempuan
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Wanita
                                     </label>
                                 </div>
 
-                            <div class="form-group">
-                                <label>Kartu Asuransi</label>
-                                <input class="form-control">
-                            </div>
+                                <div class="form-group row align-items-center">
+                                    <label for="kartuAsuransi" class="col-sm-2 col-form-label">Kartu Asuransi</label>
+                                    <div class="col-sm-4">
+                                        <select id="kartuAsuransi" class="form-control">
+                                            <option selected disabled>Pilih Kartu</option>
+                                            <option value="bpjs">BPJS</option>
+                                            <option value="asuransi-a">Asuransi A</option>
+                                            <option value="asuransi-b">Asuransi B</option>
+                                        </select>
+                                    </div>
+                                </div>
+                    
 
-                            <div class="form-group">
-                                <label>Kondisi</label>
-                                <input class="form-control">
+                            <div class="form-group row">
+                                <label for="kondisi" class="col-sm-2 col-form-label">Kondisi</label>
+                                    <div class="col-sm-4">
+                                        <select id="kartuAsuransi" class="form-control">
+                                            <option selected disabled>Pilih Kondisi</option>
+                                            <option value="sembuh">Sembuh</option>
+                                            <option value="sakit">Sakit</option>
+                                            <option value="parah">Parah</option>
+                                        </select>
+                                    </div>
                             </div>
 
                             <div class="form-group">
