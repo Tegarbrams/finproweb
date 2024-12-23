@@ -11,3 +11,6 @@
 
     <!-- Custom Fonts -->
     <link href="{{ asset('style/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+    {{-- Icon --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
