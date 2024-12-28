@@ -70,6 +70,11 @@
                         <form role="form">
 
                             <div class="form-group col-lg-12">
+                                <label>ID Pasien</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group col-lg-12">
                                 <label>Nama Pasien</label>
                                 <input class="form-control" placeholder="Masukkan nama lengkap">
                             </div>
@@ -127,10 +132,6 @@
                                 <input class="form-control">
                             </div>
 
-                            <div class="form-group">
-                                <label>ID Pasien</label>
-                                <input class="form-control">
-                            </div>
 
                             <div class="form-group">
                                 <label>Text Input with Placeholder</label>

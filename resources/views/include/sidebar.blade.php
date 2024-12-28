@@ -8,7 +8,7 @@
         </li>
         <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-user"></i> Pasien <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="demo" class="ms-3">
+            <ul id="demo" class="collapse ms-3">
                 <li>
                     <a href="/form">Tambah Pasien</a>
                 </li>
@@ -23,7 +23,7 @@
         
         <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#demi"><i class="fa fa-fw fa-user-md"></i> Tenaga Medis <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="demi" class="">
+            <ul id="demi" class="collapse">
                 <li>
                     <a href="#">Perawat</a>
                 </li>
