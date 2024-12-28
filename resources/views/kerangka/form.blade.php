@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="form-group col-lg-12">
-                                <label>Nama Pasien</label>
+                                <label>No KTP</label>
                                 <input class="form-control" placeholder="Masukkan nama lengkap">
                             </div>
 
@@ -85,24 +85,36 @@
                             </div> --}}
 
                             <div class="form-group  col-lg-12">
-                                <label>No. KTP</label>
+                                <label>Nama Pasien</label>
                                 <input class="form-control" placeholder="Masukkan NIK">
                             </div>
 
                             <div class="form-group col-lg-12">
+                                <label for="tanggalLahir" class="form-label">Tanggal Lahir</label>
+                                <input type="date" id="tanggalLahir" name="tanggalLahir" class="form-control" required>
+                            </div>
+
+                            <div class="form-group  col-lg-12">
+                                <label>Alamat</label>
+                                <input class="form-control" placeholder="Masukan Alamat Sesuai KTP">
+                            </div>
+
+                            <div class="form-group col-lg-12">
                                 <label>Jenis Kelamin</label>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Laki-laki
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Wanita
-                                    </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>Laki-Laki
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">Wanita
+                                </label>
+                            </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label>Penyakit</label>
+                                    <input class="form-control">
                                 </div>
 
-                                <div class="form-group row align-items-center">
+                                <div class="form-group row align-items-center col-lg-12">
                                     <label for="kartuAsuransi" class="col-sm-2 col-form-label">Kartu Asuransi</label>
                                     <div class="col-sm-4">
                                         <select id="kartuAsuransi" class="form-control">
@@ -115,7 +127,7 @@
                                 </div>
                     
 
-                            <div class="form-group row">
+                            <div class="form-group row col-lg-12">
                                 <label for="kondisi" class="col-sm-2 col-form-label">Kondisi</label>
                                     <div class="col-sm-4">
                                         <select id="kartuAsuransi" class="form-control">
@@ -127,7 +139,12 @@
                                     </div>
                             </div>
 
-                            <div class="form-group">
+                            <!-- Tombol Submit -->
+                            <div class="form-group col-lg-12 mt-4">
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            </div>
+
+                            {{-- <div class="form-group">
                                 <label>Nama Penyakit</label>
                                 <input class="form-control">
                             </div>
@@ -325,11 +342,11 @@
                             <div class="form-group input-group">
                                 <input type="text" class="form-control">
                                 <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
-                            </div>
+                            </div> --}}
 
                         </form>
 
-                        <p>For complete documentation, please visit <a href="http://getbootstrap.com/css/#forms">Bootstrap's Form Documentation</a>.</p>
+                        {{-- <p>For complete documentation, please visit <a href="http://getbootstrap.com/css/#forms">Bootstrap's Form Documentation</a>.</p> --}}
 
                     </div>
                 </div>

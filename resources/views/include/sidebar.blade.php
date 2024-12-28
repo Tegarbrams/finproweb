@@ -18,7 +18,7 @@
             </ul>
         </li>
         <li>
-            <a href=""><i class="fa fa-fw fa-medkit"></i> Stok Obat</a>
+            <a href="/Stok"><i class="fa fa-fw fa-medkit"></i> Stok Obat</a>
         </li>
         
         <li>

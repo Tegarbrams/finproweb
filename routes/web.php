@@ -14,3 +14,6 @@ Route::get('/form', function () {
 Route::get('/daftarPasien', function () {
     return view ('kerangka/tabel');
 });
+Route::get('/Stok', function () {
+    return view ('kerangka/Stok');
+});

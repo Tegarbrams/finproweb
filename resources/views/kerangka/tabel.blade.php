@@ -21,6 +21,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    
+
 </head>
 
 <body class="">
@@ -58,40 +60,38 @@
                 <!-- /.row -->
 
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <h2>Daftar Pasien </h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Id Pasien</th>
+                                        <th>ID Pasien</th>
+                                        <th>NIK</th>
                                         <th>Nama Pasien</th>
                                         <th>Tanggal Lahir</th>
+                                        <th>Alamat</th>
                                         <th>Jenis Kelamin</th>
+                                        <th>Penyakit</th>
+                                        <th>Kondisi</th>
                                         <th>Asuransi </th>
+                                        <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>12345</td>
+                                        <td>09091301030002</td>
                                         <td>Tegar Bramasta</td>
                                         <td>07/05/09</td>
+                                        <td>Jl. Pegangsaan Timur No.56 Jakarta, Jawa Barat</td>
                                         <td>L</td>
+                                        <td>Kaki</td>
+                                        <td>Sembuh</td>
                                         <td>BPJS</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12346</td>
-                                        <td>Ridhwan Ubaid</td>
-                                        <td>09/06/03</td>
-                                        <td>L</td>
-                                        <td>BPJS</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12347</td>
-                                        <td>Maulana Darma</td>
-                                        <td>09/11/02</td>
-                                        <td>L</td>
-                                        <td>BPJS</td>
+                                        <td class="text-center">
+                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
