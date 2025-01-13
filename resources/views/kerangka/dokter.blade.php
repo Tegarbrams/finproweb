@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +44,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Tables
+                            Dokter
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -61,34 +60,50 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>Daftar Pasien </h2>
+                        <h2>Daftar Dokter</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID Pasien</th>
-                                        <th>NIK</th>
-                                        <th>Nama Pasien</th>
-                                        <th>Tanggal Lahir</th>
-                                        <th>Alamat</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Penyakit</th>
-                                        <th>Kondisi</th>
-                                        <th>Asuransi </th>
+                                        <th>ID Dokter</th>
+                                        <th>Nama Dokter</th>
+                                        <th>Poli</th>
+                                        <th>Spesialisasi</th>
+                                        <th>Kontak</th>
+                                        <th>Kehadiran</th>
                                         <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>12345</td>
-                                        <td>09091301030002</td>
-                                        <td>Tegar Bramasta</td>
-                                        <td>07/05/09</td>
-                                        <td>Jl. Pegangsaan Timur No.56 Jakarta, Jawa Barat</td>
-                                        <td>L</td>
-                                        <td>Kaki</td>
-                                        <td>Sembuh</td>
-                                        <td>BPJS</td>
+                                        <td>00012</td>
+                                        <td>Dr. Arif Nugroho, Sp.PD</td>
+                                        <td>Poli Penyakit Dalam</td>
+                                        <td>Dokter Spesialis Penyakit Dalam</td>
+                                        <th>dr.arif.nugroho@hospital.com | +62 811 2345 6789</th>
+                                        <td>Hadir</td>
+                                        <td class="text-center">
+                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>00013</td>
+                                        <td>Dr. Siti Rahmawati, Sp.OG</td>
+                                        <td>Poli Kandungan</td>
+                                        <td>Dokter Spesialis Obstetri dan Ginekologi</td>
+                                        <th>dr.siti.rahmawati@hospital.com | +62 813 4567 8901</th>
+                                        <td>Hadir</td>
+                                        <td class="text-center">
+                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>00014</td>
+                                        <td>Dr. Budi Santoso, Sp.B</td>
+                                        <td>Poli Bedah</td>
+                                        <td>Dokter Spesialis Bedah</td>
+                                        <th>dr.budi.santoso@hospital.com | +62 812 3456 7890</th>
+                                        <td>-</td>
                                         <td class="text-center">
                                             <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
                                         </td>

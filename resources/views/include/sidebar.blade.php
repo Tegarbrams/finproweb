@@ -25,10 +25,10 @@
             <a href="javascript:;" data-toggle="collapse" data-target="#demi"><i class="fa fa-fw fa-user-md"></i> Tenaga Medis <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="demi" class="collapse">
                 <li>
-                    <a href="#">Perawat</a>
+                    <a href="/perawat">Perawat</a>
                 </li>
                 <li>
-                    <a href="#">Dokter</a>
+                    <a href="/dokter">Dokter</a>
                 </li>
             </ul>
         </li>

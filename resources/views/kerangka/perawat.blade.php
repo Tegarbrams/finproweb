@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +44,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Tables
+                            Perawat
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -61,34 +60,36 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>Daftar Pasien </h2>
+                        <h2>Daftar Perawat </h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID Pasien</th>
-                                        <th>NIK</th>
-                                        <th>Nama Pasien</th>
-                                        <th>Tanggal Lahir</th>
-                                        <th>Alamat</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Penyakit</th>
-                                        <th>Kondisi</th>
-                                        <th>Asuransi </th>
+                                        <th>ID Perawat</th>
+                                        <th>Nama</th>
+                                        <th>Poli</th>
+                                        <th>Kontak</th>
+                                        <th>Kehadiran</th>
                                         <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>12345</td>
-                                        <td>09091301030002</td>
-                                        <td>Tegar Bramasta</td>
-                                        <td>07/05/09</td>
-                                        <td>Jl. Pegangsaan Timur No.56 Jakarta, Jawa Barat</td>
-                                        <td>L</td>
-                                        <td>Kaki</td>
-                                        <td>Sembuh</td>
-                                        <td>BPJS</td>
+                                        <td>09234</td>
+                                        <td>Indah Permata Sari</td>
+                                        <td>Umum</td>
+                                        <th>insari12@gmail.com</th>
+                                        <td>Hadir</td>
+                                        <td class="text-center">
+                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>09231</td>
+                                        <td>Anna Annisa Maulida</td>
+                                        <td>Umum</td>
+                                        <th>linina46@gmail.com</th>
+                                        <td>Hadir</td>
                                         <td class="text-center">
                                             <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
                                         </td>

@@ -18,5 +18,11 @@ Route::get('/Stok', function () {
     return view ('kerangka/Stok');
 });
 Route::get('/', function () {
-    return view ('Login');
+    return view ('kerangka/dashboard');
+});
+Route::get('/dokter', function () {
+    return view ('kerangka/dokter');
+});
+Route::get('/perawat', function () {
+    return view ('kerangka/perawat');
 });
