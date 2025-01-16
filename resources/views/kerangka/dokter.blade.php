@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    
 
     <title>SB Admin - Bootstrap Admin Template</title>
 
@@ -57,6 +58,10 @@
                     </div>
                 </div>
                 <!-- /.row -->
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                    Create New
+                  </button>                  
 
                 <div class="row">
                     <div class="col-lg-12">

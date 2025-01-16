@@ -13,7 +13,7 @@
                     <a href="/form">Tambah Pasien</a>
                 </li>
                 <li>
-                    <a href="/daftarPasien">Daftar Pasien</a>
+                    <a href="{{ route('post.index') }}" >Daftar Pasien</a>
                 </li>
             </ul>
         </li>

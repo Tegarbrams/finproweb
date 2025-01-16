@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Tambah Pasien
+                            Edit Pasien
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -67,27 +67,27 @@
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <form role="form" action="{{ route('post.index') }}" method="POST">
+                        <form role="form" action="{{ route('post.store') }}" method="POST">
                             @csrf
                         
                             <div class="form-group col-lg-12">
                                 <label for="NIK" class="form-label">No KTP</label>
-                                <input type="text" name="NIK" id="NIK" class="form-control" placeholder="Masukkan NIK" required>
+                                <input type="text" name="NIK" id="NIK" class="form-control" placeholder="Masukkan NIK" value="{{ $pasien->NIK }}" required>
                             </div>
                         
                             <div class="form-group col-lg-12">
                                 <label>Nama Pasien</label>
-                                <input type="text" name="nama_pasien" id="nama_pasien" class="form-control" placeholder="Masukkan Nama Lengkap" required>
+                                <input type="text" name="nama_pasien" id="nama_pasien" class="form-control" placeholder="Masukkan Nama Lengkap" value="{{ $pasien->nama_pasien }}" required>
                             </div>
                         
                             <div class="form-group col-lg-12">
                                 <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
-                                <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control" required>
+                                <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control" value="{{ $pasien->tanggal_lahir }}" required>
                             </div>
                         
                             <div class="form-group col-lg-12">
                                 <label>Alamat</label>
-                                <input class="form-control" name="alamat" placeholder="Masukan Alamat Sesuai KTP" required>
+                                <input class="form-control" name="alamat" placeholder="Masukan Alamat Sesuai KTP" value="{{ $pasien->alamat }}" required>
                             </div>
                         
                             <div class="form-group col-lg-12">
@@ -102,7 +102,7 @@
                         
                             <div class="form-group col-lg-12">
                                 <label>Penyakit</label>
-                                <input class="form-control" name="penyakit" required>
+                                <input class="form-control" name="penyakit" value="{{ $pasien->penyakit }}" required>
                             </div>
                         
                             <div class="form-group col-lg-12">
