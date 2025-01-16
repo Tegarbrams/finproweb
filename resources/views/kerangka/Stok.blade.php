@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <!-- /.row -->
-
+                <a href="{{ route('obat.create') }}" class="btn btn-primary btn-sm col-12">Tambah</a>
                 <div class="row">
                     <div class="col-lg-12">
                         <h2>Daftar Pasien </h2>
@@ -72,12 +72,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if (isset($obat) && $obat->isNotEmpty())
+                                    @foreach ($obat as $obat)
+
                                     <tr>
-                                        <td>12345</td>
-                                        <td>Kokain</td>
-                                        <td>Pil</td>
-                                        <td>5012</td>
+                                        <td> {{ $obat->id }} </td>
+                                        <td> {{ $obat->nama_obat }} </td>
+                                        <td> {{ $obat->varian }} </td>
+                                        <td> {{ $obat->stok }} </td>
                                     </tr>
+
+                                    @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>

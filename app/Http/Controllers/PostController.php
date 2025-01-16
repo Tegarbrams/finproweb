@@ -91,9 +91,22 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $pasien = Pasien::find($id);
+        $pasien->NIK = $request->NIK;
+        $pasien->nama_pasien = $request->nama_pasien;
+        $pasien->tanggal_lahir = $request->tanggal_lahir;
+        $pasien->alamat = $request->alamat;
+        $pasien->jenis_kelamin = $request->jenis_kelamin;
+        $pasien->penyakit = $request->penyakit ?? null;
+        $pasien->asuransi = $request->asuransi;
+        $pasien->kondisi = $request->kondisi;
+        $pasien->save();
+
+        // Redirect dengan pesan sukses
+        return redirect()->route('post.index')->with('success', 'Data pasien berhasil disimpan!');
     }
 
     /**

@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Edit Pasien
+                            Tambah Stok Obat
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -67,63 +67,23 @@
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <form role="form" action="{{ route('post.update', $pasien->id) }}" method="POST">
+                        <form role="form" action="{{ route('obat.store') }}" method="POST">
                             @csrf
-                            @method('PUT')
-                            <div class="form-group col-lg-12">
-                                <label for="NIK" class="form-label">No KTP</label>
-                                <input type="text" name="NIK" id="NIK" class="form-control" placeholder="Masukkan NIK" value="{{ $pasien->NIK }}" required>
-                            </div>
+                            
                         
                             <div class="form-group col-lg-12">
-                                <label>Nama Pasien</label>
-                                <input type="text" name="nama_pasien" id="nama_pasien" class="form-control" placeholder="Masukkan Nama Lengkap" value="{{ $pasien->nama_pasien }}" required>
+                                <label>Nama Obat</label>
+                                <input type="text" name="nama_obat" id="nama_obat" class="form-control" placeholder="Masukkan Nama Obat" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Varian</label>
+                                <input type="text" name="varian" id="varian" class="form-control" placeholder="Masukkan Varian Obat" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Stok</label>
+                                <input type="text" name="stok" id="stok" class="form-control" placeholder="Masukkan Stok Obat" required>
                             </div>
                         
-                            <div class="form-group col-lg-12">
-                                <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
-                                <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control" value="{{ $pasien->tanggal_lahir }}" required>
-                            </div>
-                        
-                            <div class="form-group col-lg-12">
-                                <label>Alamat</label>
-                                <input class="form-control" name="alamat" placeholder="Masukan Alamat Sesuai KTP" value="{{ $pasien->alamat }}" required>
-                            </div>
-                        
-                            <div class="form-group col-lg-12">
-                                <label>Jenis Kelamin</label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="jenis_kelamin" value="laki-laki" checked>Laki-Laki
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="jenis_kelamin" value="wanita">Wanita
-                                </label>
-                            </div>
-                        
-                            <div class="form-group col-lg-12">
-                                <label>Penyakit</label>
-                                <input class="form-control" name="penyakit" value="{{ $pasien->penyakit }}" required>
-                            </div>
-                        
-                            <div class="form-group col-lg-12">
-                                <label for="kartuAsuransi" class="form-label">Kartu Asuransi</label>
-                                <select id="kartuAsuransi" name="asuransi" class="form-control">
-                                    <option selected disabled>Pilih Kartu</option>
-                                    <option value="bpjs">BPJS</option>
-                                    <option value="asuransi-a">Asuransi A</option>
-                                    <option value="asuransi-b">Asuransi B</option>
-                                </select>
-                            </div>
-                        
-                            <div class="form-group col-lg-12">
-                                <label for="kondisi" class="form-label">Kondisi</label>
-                                <select id="kondisi" name="kondisi" class="form-control">
-                                    <option selected disabled>Pilih Kondisi</option>
-                                    <option value="sembuh">Sembuh</option>
-                                    <option value="sakit">Sakit</option>
-                                    <option value="parah">Parah</option>
-                                </select>
-                            </div>
                         
                             <div class="form-group col-lg-12 mt-4">
                                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
