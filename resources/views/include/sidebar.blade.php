@@ -18,17 +18,17 @@
             </ul>
         </li>
         <li>
-            <a href="/Stok"><i class="fa fa-fw fa-medkit"></i> Stok Obat</a>
+            <a href="{{ route('obat.index') }}"><i class="fa fa-fw fa-medkit"></i> Stok Obat</a>
         </li>
         
         <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#demi"><i class="fa fa-fw fa-user-md"></i> Tenaga Medis <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="demi" class="collapse">
                 <li>
-                    <a href="/perawat">Perawat</a>
+                    <a href="{{ route('perawat.index') }}">Perawat</a>
                 </li>
                 <li>
-                    <a href="/dokter">Dokter</a>
+                    <a href="{{ route('dokter.index') }}">Dokter</a>
                 </li>
             </ul>
         </li>

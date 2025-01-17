@@ -41,7 +41,7 @@ class ObatController extends Controller
         $obat->save();
 
         // Redirect dengan pesan sukses
-        return redirect()->route('obat.index')->with('success', 'Data pasien berhasil disimpan!');
+        return redirect()->route('obat.index')->with('success', 'Data obat berhasil disimpan!');
     }
 
     /**
@@ -58,14 +58,26 @@ class ObatController extends Controller
     public function edit(string $id)
     {
         //
+        $obat = Obat::find($id);
+        return view('kerangka.edit_obat', [
+            'obat' => $obat,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $obat = Obat::find($id);
+        $obat->nama_obat = $request->nama_obat;
+        $obat->varian = $request->varian;
+        $obat->stok = $request->stok;
+        $obat->save();
+
+        // Redirect dengan pesan sukses
+        return redirect()->route('obat.index')->with('success', 'Data pasien berhasil disimpan!');
     }
 
     /**
@@ -74,5 +86,8 @@ class ObatController extends Controller
     public function destroy(string $id)
     {
         //
+        $obat = Obat::find($id);
+        $obat->delete();
+        return redirect()->route('obat.index')->with('success','');
     }
 }

@@ -106,7 +106,7 @@ class PostController extends Controller
         $pasien->save();
 
         // Redirect dengan pesan sukses
-        return redirect()->route('post.index')->with('success', 'Data pasien berhasil disimpan!');
+        return redirect()->route('post.index');
     }
 
     /**
@@ -119,6 +119,6 @@ class PostController extends Controller
 
         $pasien->delete();
 
-        return redirect()->route('post.index')->with('success', 'Data pasien berhasil dihapus!');
+        return redirect()->route('post.index');
     }
 }

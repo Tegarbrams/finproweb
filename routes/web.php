@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\PerawatController;
+use App\Http\Controllers\DokterController;
 
 
 Route::get('/dashboard', function () {
@@ -60,3 +62,12 @@ Route::put('/post/{id}', [PostController::class, 'update'])->name('post.update')
 Route::delete('/post/{id}', [PostController::class,'destroy'] )->name('post.destroy');
 
 Route::resource('obat', ObatController::class);
+Route::put('/obat/{id}', [ObatController::class, 'update'])->name('obat.update');
+
+Route::resource('perawat', PerawatController::class);
+Route::put('/perawat/{id}', [PerawatController::class, 'update'])->name('perawat.update');
+
+Route::resource('dokter', DokterController::class);
+Route::put('/dokter/{id}', [DokterController::class, 'update'])->name('dokter.update');
+
+

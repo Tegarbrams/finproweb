@@ -57,43 +57,47 @@
                     </div>
                 </div>
                 <!-- /.row -->
-
+                <a href="{{ route('perawat.create') }}" class="btn btn-primary btn-sm col-12">Tambah</a>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>Daftar Perawat </h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID Perawat</th>
-                                        <th>Nama</th>
-                                        <th>Poli</th>
-                                        <th>Kontak</th>
-                                        <th>Kehadiran</th>
+                                        <th>ID perawat</th>
+                                        <th>Nama perawat</th>
+                                        <th>poli</th>
+                                        <th>kontak</th>
                                         <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if (isset($perawat) && $perawat->isNotEmpty())
+                                    @foreach ($perawat as $perawat)
+
                                     <tr>
-                                        <td>09234</td>
-                                        <td>Indah Permata Sari</td>
-                                        <td>Umum</td>
-                                        <th>insari12@gmail.com</th>
-                                        <td>Hadir</td>
-                                        <td class="text-center">
-                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
+                                        <td> {{ $perawat->id }} </td>
+                                        <td> {{ $perawat->nama_perawat }} </td>
+                                        <td> {{ $perawat->poli }} </td>
+                                        <td> {{ $perawat->kontak }} </td>
+                                        <td class="text-center row">
+                                            
+                                            <a href="{{ route('perawat.edit', $perawat->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                            
+                                            <form action="{{ route('perawat.destroy', $perawat->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <input type="submit" value="Hapus" class="btn btn-danger btn-sm ">
+                                            </form>
+                                            
+
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>09231</td>
-                                        <td>Anna Annisa Maulida</td>
-                                        <td>Umum</td>
-                                        <th>linina46@gmail.com</th>
-                                        <td>Hadir</td>
-                                        <td class="text-center">
-                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
-                                        </td>
-                                    </tr>
+                                    
+
+                                    @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>

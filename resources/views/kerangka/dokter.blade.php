@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    
 
     <title>SB Admin - Bootstrap Admin Template</title>
 
@@ -58,61 +57,47 @@
                     </div>
                 </div>
                 <!-- /.row -->
-
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
-                    Create New
-                  </button>                  
-
+                <a href="{{ route('dokter.create') }}" class="btn btn-primary btn-sm col-12">Tambah</a>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>Daftar Dokter</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID Dokter</th>
-                                        <th>Nama Dokter</th>
-                                        <th>Poli</th>
-                                        <th>Spesialisasi</th>
-                                        <th>Kontak</th>
-                                        <th>Kehadiran</th>
+                                        <th>ID dokter</th>
+                                        <th>Nama dokter</th>
+                                        <th>poli</th>
+                                        <th>kontak</th>
                                         <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if (isset($dokter) && $dokter->isNotEmpty())
+                                    @foreach ($dokter as $dokter)
+
                                     <tr>
-                                        <td>00012</td>
-                                        <td>Dr. Arif Nugroho, Sp.PD</td>
-                                        <td>Poli Penyakit Dalam</td>
-                                        <td>Dokter Spesialis Penyakit Dalam</td>
-                                        <th>dr.arif.nugroho@hospital.com | +62 811 2345 6789</th>
-                                        <td>Hadir</td>
-                                        <td class="text-center">
-                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
+                                        <td> {{ $dokter->id }} </td>
+                                        <td> {{ $dokter->nama_dokter }} </td>
+                                        <td> {{ $dokter->poli }} </td>
+                                        <td> {{ $dokter->kontak }} </td>
+                                        <td class="text-center row">
+                                            
+                                            <a href="{{ route('dokter.edit', $dokter->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                            
+                                            <form action="{{ route('dokter.destroy', $dokter->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <input type="submit" value="Hapus" class="btn btn-danger btn-sm ">
+                                            </form>
+                                            
+
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>00013</td>
-                                        <td>Dr. Siti Rahmawati, Sp.OG</td>
-                                        <td>Poli Kandungan</td>
-                                        <td>Dokter Spesialis Obstetri dan Ginekologi</td>
-                                        <th>dr.siti.rahmawati@hospital.com | +62 813 4567 8901</th>
-                                        <td>Hadir</td>
-                                        <td class="text-center">
-                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>00014</td>
-                                        <td>Dr. Budi Santoso, Sp.B</td>
-                                        <td>Poli Bedah</td>
-                                        <td>Dokter Spesialis Bedah</td>
-                                        <th>dr.budi.santoso@hospital.com | +62 812 3456 7890</th>
-                                        <td>-</td>
-                                        <td class="text-center">
-                                            <i class="bi bi-pencil-square" style="font-size: 1.5rem; cursor: pointer;"></i>
-                                        </td>
-                                    </tr>
+                                    
+
+                                    @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>
