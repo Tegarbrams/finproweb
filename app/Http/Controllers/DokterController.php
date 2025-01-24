@@ -90,4 +90,13 @@ class DokterController extends Controller
         $dokter->delete();
         return redirect()->route('dokter.index')->with('success','');
     }
+
+    public function jumlah_dokter()
+    {
+        // Hitung jumlah data
+        $jumlah_dokter = Dokter::count();
+
+        // Kirim data ke view
+        return view('kerangka/dashboard', compact('jumlah_dokter'));
+    }
 }

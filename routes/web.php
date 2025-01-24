@@ -7,6 +7,8 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\User;
 
 
 Route::get('/dashboard', function () {
@@ -53,6 +55,7 @@ Route::get('/post', [PostController::class, 'index'] )->name('post.index');
 Route::post('/post/create', [PostController::class, 'create'] )->name('post.create');
 Route::post('/post', [PostController::class, 'store'] )->name('post.store');
 Route::get('/post/{id}', [PostController::class, 'show'] )->name('post.show');
+Route::get('/', [PostController::class, 'jumlah_pasien']);
 // Route::get('/post/{id}/edit', [PostController::class, 'edit'] )->name('post.edit');
 // Route::get('/post/{id}', [PostController::class, 'update'] )->name('post.update');
 // Route::delete('/post/{id}', [PostController::class, 'delete'] )->name('post.update');
@@ -71,3 +74,20 @@ Route::resource('dokter', DokterController::class);
 Route::put('/dokter/{id}', [DokterController::class, 'update'])->name('dokter.update');
 
 
+// Route::get('login', [AuthController::class, 'login'])->name('login');
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/dashboard', function () {
+    return 'Selamat datang di Dashboard!';
+})->middleware('auth');
+
+require __DIR__.'/auth.php';
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -31,10 +31,10 @@
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
+                                        {{-- <i class="fa fa-comments fa-5x"></i> --}}
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
+                                        <div class="huge">{{ $jumlah_pasien }}</div>
                                         <div>Total Pasien</div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
+                                        {{-- <i class="fa fa-tasks fa-5x"></i> --}}
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">12</div>
@@ -75,10 +75,10 @@
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                        {{-- <i class="fa fa-shopping-cart fa-5x"></i> --}}
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
+                                        <div class="huge">8</div>
                                         <div>Jumlah Perawat</div>
                                     </div>
                                 </div>
@@ -97,10 +97,10 @@
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-support fa-5x"></i>
+                                        {{-- <i class="fa fa-support fa-5x"></i> --}}
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
+                                        <div class="huge">3</div>
                                         <div>Jumlah Dokter</div>
                                     </div>
                                 </div>

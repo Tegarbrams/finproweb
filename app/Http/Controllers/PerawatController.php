@@ -91,4 +91,13 @@ class PerawatController extends Controller
         $perawat->delete();
         return redirect()->route('perawat.index')->with('success','');
     }
+
+    public function jumlah_perawat()
+    {
+        // Hitung jumlah data
+        $jumlah_perawat = Perawat::count();
+
+        // Kirim data ke view
+        return view('kerangka/dashboard', compact('jumlah_perawat'));
+    }
 }

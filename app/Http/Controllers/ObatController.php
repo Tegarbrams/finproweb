@@ -90,4 +90,13 @@ class ObatController extends Controller
         $obat->delete();
         return redirect()->route('obat.index')->with('success','');
     }
+
+    public function jumlah_obat()
+    {
+        // Hitung jumlah data
+        $jumlah_obat = Obat::count();
+
+        // Kirim data ke view
+        return view('kerangka/dashboard', compact('jumlah_obat'));
+    }
 }

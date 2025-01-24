@@ -121,4 +121,13 @@ class PostController extends Controller
 
         return redirect()->route('post.index');
     }
+
+    public function jumlah_pasien()
+    {
+        // Hitung jumlah data
+        $jumlah_pasien = Pasien::count();
+
+        // Kirim data ke view
+        return view('kerangka/dashboard', compact('jumlah_pasien'));
+    }
 }
